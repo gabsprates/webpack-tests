@@ -3,7 +3,8 @@ module.exports = {
   entry: './src/js/app.js',
   output: {
     path: './bin/js',
-    filename: 'app.bundle.js'
+    filename: 'app.bundle.js',
+    publicPath: '/bin/js'
   },
 
   module: {
@@ -18,6 +19,10 @@ module.exports = {
         loaders: ["style", "css", "sass"]
       }
     ]
+  },
+
+  devServer: {
+    inline: true
   }
 
 };
